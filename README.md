@@ -7,7 +7,7 @@ You only have to edit your book.json and modify it adding something like this:
 
 ```json
 "plugins" : [ "anchors", "ribbon" ],
-  
+
 "pluginsConfig": {
   "theme-default": {
     "showLevel": true
@@ -25,7 +25,7 @@ The next screenshot shows one of the ribbons (the black one) in action:
 
 ![ribbon](https://github.com/davidmogar/gitbook-plugin-ribbon/blob/resources/images/ribbon.png?raw=true)
 
-## Oh, there are more colors?
+## Oh, are there more colors?
 
 Yep, you can set the color to one of the next ones:
 
