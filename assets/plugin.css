@@ -42,7 +42,7 @@ a#ribbon.red {
   background: #da3c3c;
 }
 
-i.fa-external-link {
+.ribbon-toolbar i.fa {
   display: none;
 }
 
@@ -55,7 +55,7 @@ i.fa-external-link {
     display: none;
   }
 
-  i.fa-external-link {
+  .ribbon-toolbar i.fa {
     display: inline-block;
   }
 
