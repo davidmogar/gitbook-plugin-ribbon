@@ -41,7 +41,7 @@
           "orange",
           "red"
         ],
-        "title": "Ribbon hex color (defaults to black)",
+        "title": "Ribbon color (defaults to black)",
         "type": "string"
       },
       "text": {
