@@ -27,10 +27,10 @@
   },
   "gitbook": {
     "properties": {
-      "icon": {
-        "default": "fa-external-link",
-        "title": "Font awesome icon to use when the ribbon is hidden",
-        "type": "string"
+      "appendFilepath": {
+        "default": false,
+        "title": "Append filepath to the end of the url",
+        "type": "boolean"
       },
       "color": {
         "default": "black",
@@ -44,6 +44,11 @@
         "title": "Ribbon color (defaults to black)",
         "type": "string"
       },
+      "icon": {
+        "default": "fa-external-link",
+        "title": "Font awesome icon to use when the ribbon is hidden",
+        "type": "string"
+      },
       "text": {
         "required": true,
         "title": "Ribbon text",
@@ -51,7 +56,7 @@
       },
       "url": {
         "required": true,
-        "title": "URL to issues tracker",
+        "title": "URL to open on click",
         "type": "string"
       }
     }

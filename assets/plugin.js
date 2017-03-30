@@ -5,9 +5,24 @@ require(['gitbook'], function(gitbook) {
 
   function initializePlugin(config) {
     pluginConfig = config.ribbon;
+  }
 
-    ribbon = '<a id="ribbon" class="' + pluginConfig.color + '" href="' +
-             pluginConfig.url + '">' + pluginConfig.text + '</a>';
+  function getUrl() {
+    var url = pluginConfig.url;
+
+    if (pluginConfig.appendFilepath) {
+      if (url.slice(-1) != '/') {
+        url = url + '/'
+      }
+      url = url + gitbook.state.filepath;
+    }
+
+    return url;
+  }
+
+  function getRibbon() {
+    return '<a id="ribbon" class="' + pluginConfig.color + '" href="' +
+             getUrl() + '">' + pluginConfig.text + '</a>';
   }
 
   function getPluginConfig() {
@@ -18,18 +33,19 @@ require(['gitbook'], function(gitbook) {
     initializePlugin(config);
 
     gitbook.toolbar.createButton({
+      className: 'ribbon-toolbar',
       icon: 'fa ' + pluginConfig.icon,
       label: pluginConfig.text,
       position: 'right',
       onClick: function() {
-        window.open(pluginConfig.url);
+        window.open(getUrl());
       }
     });
   });
 
   gitbook.events.bind('page.change', function() {
     var bodyInner = $('.book .book-body .body-inner');
-    bodyInner.append(ribbon);
+    bodyInner.append(getRibbon());
   });
 
 });
