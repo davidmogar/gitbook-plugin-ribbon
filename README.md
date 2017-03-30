@@ -51,7 +51,8 @@ Sure! Whenever the GitBook page is too small to show the ribbon, this one will h
 ## Anything else I should know?
 
 Not much. Just a quick note about the plugin parameters:
-* **color**: Color of the ribbon. Defaults to `black`
-* **icon**: Icon that will be showed when the ribbon is hidden. Defaults to `fa-external-link`
+* **appendFilepath**: Append filepath to the end of the url. Defaults to `false`.
+* **color**: Color of the ribbon. Defaults to `black`.
+* **icon**: Icon that will be showed when the ribbon is hidden. Defaults to `fa-external-link`.
 * **title**: Text that will be showed in the ribbon. `Required`.
 * **url**: Url that will be opened when clicking in the ribbon. `Required`.
